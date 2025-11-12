@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cut The Button Online</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>💔 Cut The Button</h1>
+
+  <div class="setup">
+    <input type="text" id="name1Input" placeholder="Player 1 Name">
+    <input type="text" id="name2Input" placeholder="Player 2 Name">
+  </div>
+
+  <div class="game-area">
+    <div class="player" id="player1">Player 1</div>
+    <div class="button" id="theButton" title="Not active"></div>
+    <div class="player" id="player2">Player 2</div>
+  </div>
+
+  <div class="prompt" id="prompt">Waiting for button to activate...</div>
+  <div class="message" id="message"></div>
+
+  <!-- Sound -->
+  <audio id="eliminateSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2e3b40d4d7.mp3?filename=buzzer-or-wrong-answer-20582.mp3" preload="auto"></audio>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
