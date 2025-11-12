@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: cut-the-button
+    env: node
+    plan: free
+    branch: main
+    buildCommand: npm ci
+    startCommand: npm start
+    autoDeploy: true
