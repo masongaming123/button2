@@ -1,0 +1,70 @@
+```markdown
+# cut-the-button
+
+Real-time "Cut The Button" multiplayer demo using Express + Socket.IO.
+
+Project structure:
+- public/
+  - index.html
+  - style.css
+  - client.js
+- server.js
+- package.json
+
+Quick local run:
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Start:
+   ```bash
+   npm start
+   ```
+   Or, for development with automatic restarts:
+   ```bash
+   npm run dev
+   ```
+
+3. Open in your browser:
+   ```
+   http://localhost:3000
+   ```
+
+How to create the GitHub repo and push (run these from the project root):
+1. Initialize and commit:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   ```
+
+2A. Create repo with GitHub CLI (recommended):
+   ```bash
+   gh auth login
+   gh repo create masongaming123/cut-the-button --public --source=. --remote=origin --push
+   ```
+
+2B. Or create repo on github.com and push:
+   ```bash
+   git branch -M main
+   git remote add origin git@github.com:masongaming123/cut-the-button.git
+   git push -u origin main
+   ```
+
+Deploy to Render:
+1. Sign in at https://render.com with GitHub.
+2. Create → Web Service → connect repo `masongaming123/cut-the-button`.
+3. Configure:
+   - Build command: `npm ci`
+   - Start command: `npm start`
+   - Branch: `main`
+   - Auto deploy: enabled
+4. Create the service and open the generated URL.
+
+Optional: Use the included Dockerfile or Procfile for other hosts.
+
+Notes:
+- The server uses `process.env.PORT || 3000` so Render / other hosts will set the port automatically.
+- If audio doesn't play automatically in browsers, users must interact with the page first (browser autoplay policy).
+```
